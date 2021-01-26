@@ -20,6 +20,7 @@ public class Main3 {
                 nextLine = br.readLine();
             }
             System.out.println(cislo);
+            br.close();
 
         } catch (IOException e) {
             System.out.println("Nelze přečíst soubor.");
