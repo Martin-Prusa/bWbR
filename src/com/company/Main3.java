@@ -11,12 +11,15 @@ public class Main3 {
             int cislo = 0;
             String nextLine=br.readLine();
             while(nextLine!=null) {
-                String[] a = nextLine.split(" ");
-                if(a[0].equals("P")) {
-                    cislo += Integer.parseInt(a[1]);
-                } else {
-                    cislo -= Integer.parseInt(a[1]);
-                }
+//                String[] a = nextLine.split(" ");
+//                if(a[0].equals("P")) {
+//                    cislo += Integer.parseInt(a[1]);
+//                } else {
+//                    cislo -= Integer.parseInt(a[1]);
+//                }
+                nextLine = nextLine.replaceAll("P ", "+");
+                nextLine = nextLine.replaceAll("N ", "-");
+                cislo += Integer.parseInt(nextLine);
                 nextLine = br.readLine();
             }
             System.out.println(cislo);
